@@ -5,7 +5,7 @@ const {validateReadById,validateReadByRange,validateCreate}=require('./../../src
 const validator=require('./../../src/middlewares/validator')
 const controllers = require("./../../src/http/controllers/appointment.controller");
 const {roles, resource} = require('./../../src/roles/appointment.role');
-const {grantAccess} = require("./../../src/middlewares/grant-access");
+
 router
     .route("/")
     /**
@@ -122,11 +122,6 @@ router
      */
     .get(validator(validateReadByRange,"query"),controllers.getByRange)
 
-
-router
-    .route("/:id")
-
-    .get(grantAccess(resource, roles),validator(validateReadById(),"params"),controllers.getById)
 
 
 module.exports = router;

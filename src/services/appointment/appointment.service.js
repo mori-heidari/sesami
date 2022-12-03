@@ -27,19 +27,6 @@ const create = async (id, start, end) => {
     });
 
 };
-const getById = async (id) => {
-    return new Promise(async (resolve, reject) => {
-        try {
-            const appointment = await Appointment.findById({
-                id: id,
-            });
-            resolve(appointment);
-        } catch (error) {
-            return reject(error);
-        }
-    });
-
-};
 const getByRange = async (start, end) => {
     return new Promise(async (resolve, reject) => {
         try {
