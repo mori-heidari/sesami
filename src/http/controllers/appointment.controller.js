@@ -7,7 +7,7 @@ exports.create = asyncCatch(async (req, res, err) => {
     return res.status(200).json({
         status: true,
         message: "success",
-        result: result,
+        result: {},
     });
 });
 
