@@ -43,7 +43,6 @@ const getByRange = async (start, end) => {
 };
 module.exports = {
     create,
-    getById,
     getByRange
 }
 
