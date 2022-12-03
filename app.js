@@ -62,7 +62,7 @@ app.all("*", (req, res, next) => {
     next(new AppError(`Cannot find ${req.originalUrl} on this server!`, 404));
 });
 //db
-mongoose.connect(config.get('db_connection_string'))
+mongoose.connect(process.env.DB_CONNECTION_STRING||config.get('db_connection_string'))
     .then(() => {
         console.log("connected to database");
     }).catch(err => {
