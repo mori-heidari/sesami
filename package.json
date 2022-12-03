@@ -1,0 +1,34 @@
+{
+  "name": "sesami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mongo": "sudo mongod --dbpath /System/Volumes/Data/data/db",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "accesscontrol": "^2.2.1",
+    "body-parser": "^1.20.1",
+    "config": "^3.3.8",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "hpp": "^0.2.3",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.5",
+    "morgan": "^1.10.0",
+    "speakeasy": "^2.0.0",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.6.0",
+    "xss-clean": "^0.1.1"
+  }
+}
